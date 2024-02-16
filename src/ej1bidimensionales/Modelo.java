@@ -41,12 +41,18 @@ public class Modelo {
         this.tipo = tipo;
     }
     
-    public void establecerDatos(String denominacion, int tipo){
-        this.denominacion = denominacion;
-        this.tipo = tipo;
+    public float getUnaVenta(int mes){
+        return ventas[mes];
     }
     
     public void setVentaUnMes(int mes, float importe){
         this.ventas[mes] = importe;
     }
+    
+    public void setDenominacionTipo(String denominacion, int tipo){
+        this.denominacion = denominacion;
+        this.tipo = tipo;
+    }
+    
+    
 }

@@ -44,7 +44,7 @@ public class Concesionario {
         for (int posModelo = 0; posModelo < modelos.length; posModelo++) {
             denominacion = pedirDenominacion();
             tipo = pedirTipo();
-            modelos[posModelo].establecerDatos(denominacion, tipo);
+            modelos[posModelo].setDenominacionTipo(denominacion, tipo);
         }
     }
 
@@ -110,6 +110,10 @@ public class Concesionario {
                 importe = Numero.pedirNumeroReal("Introduce las ventas: ", 0, Float.MAX_VALUE);
             }
         }
+    }
+    
+    private float sumarVentas(){
+        
     }
     
 }

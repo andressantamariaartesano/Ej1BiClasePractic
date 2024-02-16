@@ -136,9 +136,6 @@ public class Concesionario {
                 encontrado = true;
             }
         }
-        if (!encontrado) {
-            posImporte = -1;
-        }
         
         return posImporte;
     }

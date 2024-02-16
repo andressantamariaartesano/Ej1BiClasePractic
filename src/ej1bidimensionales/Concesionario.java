@@ -130,7 +130,7 @@ public class Concesionario {
         boolean encontrado = false;
         
         while (!encontrado && posImporte < IMPORTES.length) {
-            if (IMPORTES[posImporte] = importe){
+            if (IMPORTES[posImporte] == importe){
                 posImporte++;
             } else {
                 encontrado = true;

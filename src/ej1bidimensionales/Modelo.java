@@ -54,5 +54,14 @@ public class Modelo {
         this.tipo = tipo;
     }
     
+    public float sumarVentas(int mesInicio, int mesFinal){
+        float suma = 0;
+        
+        for (int mes = mesInicio; mes < mesFinal; mes++) {
+            suma = suma + ventas[mes];
+        }
+        
+        return suma;
+    }
     
 }

@@ -15,6 +15,9 @@ public class Ej1Bidimensionales {
      */
     public static void main(String[] args) {
         Concesionario concesionario = new Concesionario(3);
+        concesionario.introducirDatos();
+        concesionario.pedirVentas();
+        concesionario.informeVentas();
         
     }
     

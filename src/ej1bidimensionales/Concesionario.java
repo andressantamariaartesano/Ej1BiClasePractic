@@ -15,12 +15,13 @@ public class Concesionario {
 
     Modelo[] modelos;
     final String[] TIPOS = {"turismo", "deportivo", "todorerreno"};
+    final static String[] MESES = {"Enero","Febrero","Mar","Abril","Mayo","Junio"};
+    final float[] IMPORTES = {15000.0f, 30000.0f, 50000.0f, 100000.0f, Float.MAX_VALUE};
     final float[][] PORCENTAJES = { // guardo en un array bidimensional la tabla lo primero es el tipo, lo segundo es el importe
         {0.15f, 0.10f, 0.10f, 0.18f, 0.06f},
         {0.18f, 0.12f, 0.14f, 0.20f, 0.08f},
         {0.21f, 0.14f, 0.16f, 0.22f, 0.10f}};
-    final static String[] MESES = {"Enero","Febrero","Mar","Abril","Mayo","Junio"};
-
+    
     public Concesionario(int numero) {
         modelos = new Modelo[numero];
         crearModelos(numero);
@@ -112,8 +113,34 @@ public class Concesionario {
         }
     }
     
-    private float sumarVentas(){
+    public void informeVentas(){
+        float primerTrimestre;
+        float segundoTrimestre;
+        float totalTrimestre;
         
+        for (int posModelo = 0; posModelo < modelos.length; posModelo++) {
+            primerTrimestre = modelos[posModelo].sumarVentas(0, 3);
+            segundoTrimestre = modelos[posModelo].sumarVentas(3, 6);
+            
+        }
+    }
+    
+    private int buscarImporte(float importe) {
+        int posImporte = 0;
+        boolean encontrado = false;
+        
+        while (!encontrado && posImporte < IMPORTES.length) {
+            if (IMPORTES[posImporte] = importe){
+                posImporte++;
+            } else {
+                encontrado = true;
+            }
+        }
+        if (!encontrado) {
+            posImporte = -1;
+        }
+        
+        return posImporte;
     }
     
 }
